@@ -65,16 +65,17 @@ $superheroes = [
 
 header("Content-Type: application/json");
 
-$query = htmlspecialchars(trim($_GET["query"] ?? "")); // SANITIZE INPUT
+//Sanitize input
+$query = htmlspecialchars(trim($_GET["query"] ?? ""));
 
-// IF NO SEARCH — RETURN "LIST OF ALIASES"
+// Empty search
 if ($query === "") {
     $aliases = array_map(fn($hero) => $hero["alias"], $superheroes);
     echo json_encode($aliases);
     exit;
 }
 
-// OTHERWISE — SEARCH
+// Search hero
 $queryLower = strtolower($query);
 $result = null;
 
