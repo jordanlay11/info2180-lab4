@@ -9,8 +9,24 @@
 </head>
 
 <body>
-    <h1>Avengers Character Search</h1>
-    <button id="searchBtn">Search</button>
+    <header>
+        <h1>Avengers Character Search</h1>
+        <img src="banner.jpg" alt="banner" />
+    </header>
+    <main>
+        <p>Search by full name or alias</p>
+        <form id="form">
+            <input type="text" id="search" placeholder="e.g. Captain America or Steve Rogers">
+            <button type="submit" id="searchBtn">Search</button>
+        </form>
+        <h2>Results</h2>
+        <hr>
+        <div id="result">
+            <h3 id="alias"></h3>
+            <h4 id="name"></h4>
+            <p id="biography"></p>
+        </div>
+    </main>
     <script src="app.js"></script>
 </body>
 

@@ -1,13 +1,64 @@
 body {
-    background: #999;
+    background: silver;
     font-family: Arial, sans-serif;
-    padding: 2em;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    background-color: black;
+    font-weight: bold;
+    font-size: large;
+    padding-top: 20px;
+}
+
+header h1 {
+    margin: 0;
+    color: silver;
+}
+
+main {
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 20px;
 }
 
 h1 {
     font-weight: bold;
 }
 
+input {
+    padding: 6px;
+    width: 60%;
+    margin-right: 10px;
+    width: 70%;
+}
+
 button {
     padding: 6px 12px;
+    width: 20%;
+    color: black;
+    background-color: silver;
+}
+
+.not-found {
+    color: red;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.fadeIn {
+    animation: fadeIn 0.5s ease-in;
 }
